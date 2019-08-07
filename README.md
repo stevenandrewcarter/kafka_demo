@@ -10,6 +10,19 @@ the second topic.
 kafkademo [OPTIONS] COMMAND [ARGS]
 ```
 
-## Buidling
+## Building
 
 The `build.gradle` contains all of the information required for building the solution.
+
+# Kafkacat
+
+You can also use Kafkacat to test calls against kafka brokers. The following are some examples of using Kafkacat
+
+```$bash
+# List Meta Data
+$ kafkacat -L -b localhost:9092
+# Read from a Topic
+$ kafkacat -C -b localhost:9092 -t <TOPIC_NAME>
+# Write to a Topic
+$ kafkacat -P -b localhost:9092 -t <TOPIC_NAME>
+```
